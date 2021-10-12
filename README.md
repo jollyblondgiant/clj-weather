@@ -1,19 +1,21 @@
 # compokedex
 
-FIXME
+clone this directory, then cd into the newly created folder
 
-## Prerequisites
+make sure you have leiningen installed:
+$ sudo apt-get install leiningen
 
-You will need [Leiningen][] 2.0.0 or above installed.
+once it is installed, run
+$ lein ring server.
 
-[leiningen]: https://github.com/technomancy/leiningen
+a browser window will open to localhost:3000
 
-## Running
+Then navigate to localhost:3000/{lat}/{lng}.
 
-To start a web server for the application, run:
+alternatively, run:
+$ curl 127.0.0.1:3000/{lat}/{lng}
 
-    lein ring server
-
-## License
-
-Copyright © 2021 FIXME
+Libraries used:
+compojure, ring: for capture lat/lng as url params
+clj-http: helps with sending api calls and parsing responses
+clojure.data.json: for parsing json
